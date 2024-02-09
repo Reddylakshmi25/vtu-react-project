@@ -1,5 +1,6 @@
 import React from "react";
 import { Navbar,Nav,NavDropdown,Container,Image} from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
 
 const Header = () => {
 
@@ -7,35 +8,73 @@ const Header = () => {
         <header>
         <Navbar className="navbar-style" expand="lg">
               <Container>
-              <Navbar.Brand href="#">
-              <Image className="logo-img-style" src='images/logo.jpg' alt="VTU" roundedCircle/>
-              <h6 className="logo-text-style">Visvesvaraya Technological University, Belagavi</h6>
-              </Navbar.Brand>
-              <Navbar.Toggle aria-controls="navbarScroll" />
-              <Navbar.Collapse id="navbarScroll">
+              
+              <LinkContainer to='/'>
+                <Navbar.Brand href="/">
+                <Image className="logo-img-style" src='images/logo.jpg' alt="VTU" roundedCircle/>
+                <h6 className="logo-text-style">Visvesvaraya Technological University, Belagavi</h6>
+                </Navbar.Brand>
+              </LinkContainer>
+              
+              <Navbar.Toggle aria-controls="basic-navbar-Scroll" />
+              <Navbar.Collapse id="basic-navbar-Scroll">
               <Nav className="ml-auto">
-            <Nav.Link href="#">Home</Nav.Link>
-            <Nav.Link href="#link">About us</Nav.Link>
+
+                <LinkContainer to='/'>
+                  <Nav.Link href="#">Home</Nav.Link>
+                </LinkContainer>
+
+                <LinkContainer to ='/about'>
+                    <Nav.Link href="#link">About us</Nav.Link>
+                </LinkContainer>
+
       <NavDropdown title="Academic" id="collasible-nav-dropdown">
-        <NavDropdown.Item href="#">Admission</NavDropdown.Item>
-        <NavDropdown.Item href="#">Circulars & Notification</NavDropdown.Item>
-        <NavDropdown.Item href="#">Certificate Issued</NavDropdown.Item>
+        <LinkContainer to='/admission'>
+           <NavDropdown.Item href="#">Admission</NavDropdown.Item>
+        </LinkContainer>
+
+        <LinkContainer to='/circular/notification'>
+           <NavDropdown.Item href="#">Circulars & Notification</NavDropdown.Item>
+        </LinkContainer>
+
+        <LinkContainer to='/certificates'>
+           <NavDropdown.Item href="#">Certificate Issued</NavDropdown.Item>
+        </LinkContainer>
       </NavDropdown>
 
       <NavDropdown title="Examination" id="collasible-nav-dropdown">
-        <NavDropdown.Item href="#">Examination Guidelines</NavDropdown.Item>
-        <NavDropdown.Item href="#">Examination Application</NavDropdown.Item>
-        <NavDropdown.Item href="#">Results</NavDropdown.Item>
+        <LinkContainer to ='/guidelines'>
+            <NavDropdown.Item href="#">Examination Guidelines</NavDropdown.Item>
+        </LinkContainer>
+
+        <LinkContainer to='/application'>
+            <NavDropdown.Item href="#">Examination Application</NavDropdown.Item>
+        </LinkContainer>
+        
+        <LinkContainer to ='/result'>
+           <NavDropdown.Item href="#">Results</NavDropdown.Item>
+        </LinkContainer>
+
       </NavDropdown>
 
       <NavDropdown title="VTU Departments" id="collasible-nav-dropdown">
-        <NavDropdown.Item href="#">Civil Engg</NavDropdown.Item>
-        <NavDropdown.Item href="#">Computer Science Engg</NavDropdown.Item>
-        <NavDropdown.Item href="#">Electronics & Communication Engg</NavDropdown.Item>
+        <LinkContainer to='/civil'>
+           <NavDropdown.Item href="#">Civil Engg</NavDropdown.Item>
+        </LinkContainer>
+
+        <LinkContainer to='cse'>
+           <NavDropdown.Item href="#">Computer Science Engg</NavDropdown.Item>
+        </LinkContainer>
+
+        <LinkContainer to='/ece'>
+           <NavDropdown.Item href="#">Electronics & Communication Engg</NavDropdown.Item>
+        </LinkContainer>
       </NavDropdown>
 
       <NavDropdown title="Staff Login" id="collasible-nav-dropdown">
-        <NavDropdown.Item href="#">Login as Admin</NavDropdown.Item>
+        <LinkContainer to='/admin'>
+           <NavDropdown.Item href="#">Login as Admin</NavDropdown.Item>
+        </LinkContainer>
       </NavDropdown>
 
     </Nav>
