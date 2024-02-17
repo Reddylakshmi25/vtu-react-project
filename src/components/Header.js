@@ -51,7 +51,7 @@ const Header = () => {
             <NavDropdown.Item href="#">Examination Application</NavDropdown.Item>
         </LinkContainer>
         
-        <LinkContainer to ='/result'>
+        <LinkContainer to ='/result/loginpage'>
            <NavDropdown.Item href="#">Results</NavDropdown.Item>
         </LinkContainer>
 

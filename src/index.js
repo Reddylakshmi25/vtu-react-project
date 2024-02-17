@@ -8,6 +8,7 @@ import reportWebVitals from './reportWebVitals';
 import HomeScreen from './Screens/HomeScreen';
 import AboutUs from './Screens/AboutUs';
 import ResultLoginPage from './Screens/ResultLoginPage';
+import ResultPage from './Screens/ResultPage';
 
 
 const router = createBrowserRouter(
@@ -15,7 +16,8 @@ const router = createBrowserRouter(
     <Route path='/' element={<App />}>
       <Route index={HomeScreen} path='/' element={<HomeScreen />} />
       <Route path ='/about' element={<AboutUs />}/>
-      <Route path='/result' element={<ResultLoginPage/>}/>
+      <Route path='/result/loginPage' element={<ResultLoginPage/>}/>
+      <Route path='/resultpage/:id' element={<ResultPage/>} />
     </Route>  
   )
 )

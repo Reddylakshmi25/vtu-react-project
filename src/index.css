@@ -28,8 +28,8 @@ marquee{
 }
 .about-img1{
   margin-top: 2rem;
-  width:600px;
-  height:400px;
+  /* width:500px; */
+  height:350px;
 }
 .p1-style{
   margin-top: 2rem;
@@ -45,16 +45,18 @@ h3{
 .about-img2{
   margin-top: 2rem;
   margin-left:3rem;
-  width:600px;
-  height:400px;
+  /* width:600px; */
+  height:350px;
 }
 .about-img3{
   margin-top: 2rem;
   margin-right:2rem;
-  width:600px;
-  height:400px;
+  height:350px;
 }
 .p3-style{
   margin-top: 2rem;
   text-align:justify;
+}
+th,tr,td{
+  text-align:center;
 }
